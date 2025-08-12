@@ -194,3 +194,71 @@ class Coordinate(object):
 p1 = Coordinate(3, 4)
 p2 = Coordinate(0, 0)
 print(p1.distance(p2))  # Output: 5.0
+
+
+
+lecture 9 - code
+# Base Animal class
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+
+    def get_age(self):
+        return self.age
+
+    def get_name(self):
+        return self.name
+
+    def set_age(self, newage):
+        self.age = newage
+
+    def set_name(self, newname=""):
+        self.name = newname
+
+    def __str__(self):
+        return "animal: " + str(self.name) + ":" + str(self.age)
+
+
+# Rabbit class inheriting from Animal
+class Rabbit(Animal):
+    tag = 1  # Class variable to keep unique IDs
+
+    def __init__(self, age, parent1=None, parent2=None):
+        Animal.__init__(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.rid = Rabbit.tag
+        Rabbit.tag += 1
+
+    def get_rid(self):
+        return str(self.rid).zfill(3)  # Pads with zeros, e.g., 001
+
+    def get_parent1(self):
+        return self.parent1
+
+    def get_parent2(self):
+        return self.parent2
+
+    def __str__(self):
+        return "rabbit: " + str(self.get_rid())
+
+
+# Running Example
+if __name__ == "__main__":
+    r1 = Rabbit(2)
+    r1.set_name("Bunny")
+
+    r2 = Rabbit(3)
+    r2.set_name("Snowy")
+
+    r3 = Rabbit(1, r1, r2)  # Child rabbit with parents r1 and r2
+    r3.set_name("Fluffy")
+
+    # Print rabbits
+    print(r1)  # rabbit: 001
+    print(r2)  # rabbit: 002
+    print(r3)  # rabbit: 003
+
+    # Access parents
+    print("Fluffy's parents:", r3.get_parent1().get_name(), "and", r3.get_parent2().get_name())
