@@ -1,3 +1,4 @@
+MIT-Python
 
 ## **Day 1 — Lecture 1 Code**
 ```python
@@ -262,3 +263,6 @@ if __name__ == "__main__":
 
     # Access parents
     print("Fluffy's parents:", r3.get_parent1().get_name(), "and", r3.get_parent2().get_name())
+=======
+Day 8: Started GitHub Skills course. Created repo and branch. This is my first commit.
+ main
