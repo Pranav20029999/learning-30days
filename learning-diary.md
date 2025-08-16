@@ -1,3 +1,4 @@
+MIT-Python
 
 ## **Day 1 — Lecture 1 Code**
 ```python
@@ -262,6 +263,7 @@ if __name__ == "__main__":
 
     # Access parents
     print("Fluffy's parents:", r3.get_parent1().get_name(), "and", r3.get_parent2().get_name())
+<<<<<<< HEAD
 
 
 
@@ -301,3 +303,8 @@ def bisection_search(L, x):
 L = list(range(100))
 print(linear_search(L, 42))      # True
 print(bisection_search(L, 42))   # True
+=======
+=======
+Day 8: Started GitHub Skills course. Created repo and branch. This is my first commit.
+ main
+>>>>>>> a45c3f3f945c28f8b959a60bb99a912eb69fbc4f
