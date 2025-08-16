@@ -263,6 +263,48 @@ if __name__ == "__main__":
 
     # Access parents
     print("Fluffy's parents:", r3.get_parent1().get_name(), "and", r3.get_parent2().get_name())
+<<<<<<< HEAD
+
+
+
+
+    ## Day 10 — Lecture 10: Understanding Program Efficiency (Part 1)
+
+**Concepts Learned:**
+- Program efficiency describes how runtime grows with input size.
+- **Big-O notation** is used to analyze growth rates:
+  - Linear Search → O(n)
+  - Bisection Search → O(log n)
+
+**Code from Lecture 10:**
+```python
+# Linear Search (O(n))
+def linear_search(L, x):
+    for e in L:
+        if e == x:
+            return True
+    return False
+
+# Bisection Search (O(log n)) - works on sorted lists
+def bisection_search(L, x):
+    low = 0
+    high = len(L) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if L[mid] == x:
+            return True
+        elif L[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return False
+
+# Example usage
+L = list(range(100))
+print(linear_search(L, 42))      # True
+print(bisection_search(L, 42))   # True
+=======
 =======
 Day 8: Started GitHub Skills course. Created repo and branch. This is my first commit.
  main
+>>>>>>> a45c3f3f945c28f8b959a60bb99a912eb69fbc4f
