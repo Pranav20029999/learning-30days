@@ -354,3 +354,53 @@ binary_result = binary_search(sorted_list, target)
 end = time.time()
 print("Binary Search:", end - start, "seconds")
 
+
+
+# Lecture 12 - searching and sorting
+import random
+import time
+
+# Bubble Sort
+def bubble_sort(lst):
+    n = len(lst)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst
+
+# Selection Sort
+def selection_sort(lst):
+    n = len(lst)
+    for i in range(n):
+        min_index = i
+        for j in range(i + 1, n):
+            if lst[j] < lst[min_index]:
+                min_index = j
+        lst[i], lst[min_index] = lst[min_index], lst[i]
+    return lst
+
+# Test Performance
+size = 5000  # careful: bubble/selection are slow for big lists
+nums = [random.randint(0, 10000) for _ in range(size)]
+
+# Bubble Sort
+nums_copy = nums[:]
+start = time.time()
+bubble_sort(nums_copy)
+end = time.time()
+print("Bubble Sort Time:", end - start, "seconds")
+
+# Selection Sort
+nums_copy = nums[:]
+start = time.time()
+selection_sort(nums_copy)
+end = time.time()
+print("Selection Sort Time:", end - start, "seconds")
+
+# Python's Built-in Sort
+nums_copy = nums[:]
+start = time.time()
+nums_copy.sort()
+end = time.time()
+print("Python Built-in Sort Time:", end - start, "seconds")
