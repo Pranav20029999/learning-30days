@@ -1,6 +1,16 @@
-MIT-Python
+# MIT Python Learning Diary
 
-## **Day 1 — Lecture 1 Code**
+A daily diary summarizing concepts, code, and key learnings from the MIT Python lectures.
+
+---
+
+## **Day 1 — Lecture 1: Introduction to Python**
+
+**Topics Covered:**
+- Basic printing and variables
+- Arithmetic operations
+
+**Code:**
 ```python
 print("Hello, world!")
 
@@ -17,14 +27,19 @@ print("Difference:", x - y)
 print("Product:", x * y)
 print("Quotient:", x / y)
 print("Power:", x ** y)
+```
 
+---
 
+## **Day 2 — Lecture 2: Conditionals and Loops**
 
+**Topics Covered:**
+- Input and integer conversion
+- If/else statements
+- While and for loops
 
-Day 2 — Lecture 2 Code
-python
-Copy
-Edit
+**Code:**
+```python
 x = int(input("Enter an integer: "))
 
 if x % 2 == 0:
@@ -39,14 +54,19 @@ while count < 5:
 
 for i in range(5):
     print("i:", i)
+```
 
+---
 
+## **Day 3 — Lecture 3: Functions and Approximations**
 
+**Topics Covered:**
+- Defining and using functions
+- Even/odd checker
+- Cube root approximation (linear search)
 
-Day 3 — Lecture 3 Code
-python
-Copy
-Edit
+**Code:**
+```python
 def is_even(i):
     return i % 2 == 0
 
@@ -73,14 +93,17 @@ if abs(guess**3 - cube) >= epsilon:
     print('Failed on cube root of', cube)
 else:
     print(guess, 'is close to the cube root of', cube)
+```
 
+---
 
+## **Day 4 — Lecture 4: Recursion**
 
+**Topics Covered:**
+- Writing recursive functions
 
-Day 4 — Lecture 4 Code
-python
-Copy
-Edit
+**Code:**
+```python
 def factorial(n):
     if n == 1:
         return 1
@@ -88,14 +111,18 @@ def factorial(n):
         return n * factorial(n-1)
 
 print("Factorial of 5:", factorial(5))
+```
 
+---
 
+## **Day 5 — Lecture 5: Tuples & Data Manipulation**
 
+**Topics Covered:**
+- Tuples
+- Extracting data and unique elements
 
-Day 5 — Lecture 5 Code
-python
-Copy
-Edit
+**Code:**
+```python
 def get_data(aTuple):
     nums = ()
     words = ()
@@ -111,14 +138,17 @@ def get_data(aTuple):
 sample = ((1, 'apple'), (3, 'banana'), (2, 'apple'), (5, 'orange'))
 result = get_data(sample)
 print(result)
+```
 
+---
 
+## **Day 6 — Lecture 6: Towers of Hanoi (Recursion Example)**
 
+**Topics Covered:**
+- Recursive problem-solving
 
-Day 6 — Lecture 6 Code
-python
-Copy
-Edit
+**Code:**
+```python
 def printMove(fr, to):
     print('Move from', fr, 'to', to)
 
@@ -131,14 +161,19 @@ def Towers(n, fr, to, spare):
         Towers(n - 1, spare, to, fr)
 
 Towers(3, 'A', 'C', 'B')
+```
 
+---
 
+## **Day 7 — Lecture 7: Exception Handling and Data Structures**
 
+**Topics Covered:**
+- Average calculation
+- Exception handling (try/except)
+- Nested lists
 
-Day 7 — Lecture 7 Code
-python
-Copy
-Edit
+**Code:**
+```python
 def avg(grades):
     try:
         return sum(grades) / len(grades)
@@ -174,14 +209,18 @@ except ZeroDivisionError:
     print("Can't divide by zero.")
 except:
     print("Something went very wrong.")
+```
 
+---
 
+## **Day 8 — Lecture 8: Classes and Objects**
 
-    
-Day 8 — Lecture 8 Code
-python
-Copy
-Edit
+**Topics Covered:**
+- Object-oriented programming
+- Defining and using classes
+
+**Code:**
+```python
 class Coordinate(object):
     def __init__(self, x, y):
         self.x = x
@@ -195,10 +234,19 @@ class Coordinate(object):
 p1 = Coordinate(3, 4)
 p2 = Coordinate(0, 0)
 print(p1.distance(p2))  # Output: 5.0
+```
 
+---
 
+## **Day 9 — Lecture 9: Inheritance and More OOP**
 
-lecture 9 - code
+**Topics Covered:**
+- Inheritance
+- Class variables
+- Parent-child relationships
+
+**Code:**
+```python
 # Base Animal class
 class Animal(object):
     def __init__(self, age):
@@ -219,7 +267,6 @@ class Animal(object):
 
     def __str__(self):
         return "animal: " + str(self.name) + ":" + str(self.age)
-
 
 # Rabbit class inheriting from Animal
 class Rabbit(Animal):
@@ -244,7 +291,6 @@ class Rabbit(Animal):
     def __str__(self):
         return "rabbit: " + str(self.get_rid())
 
-
 # Running Example
 if __name__ == "__main__":
     r1 = Rabbit(2)
@@ -263,20 +309,19 @@ if __name__ == "__main__":
 
     # Access parents
     print("Fluffy's parents:", r3.get_parent1().get_name(), "and", r3.get_parent2().get_name())
-<<<<<<< HEAD
+```
 
+---
 
-
-
-    ## Day 10 — Lecture 10: Understanding Program Efficiency (Part 1)
+## **Day 10 — Lecture 10: Understanding Program Efficiency (Part 1)**
 
 **Concepts Learned:**
 - Program efficiency describes how runtime grows with input size.
-- **Big-O notation** is used to analyze growth rates:
+- **Big-O notation** is used to analyze algorithm growth rates:
   - Linear Search → O(n)
   - Bisection Search → O(log n)
 
-**Code from Lecture 10:**
+**Code:**
 ```python
 # Linear Search (O(n))
 def linear_search(L, x):
@@ -303,20 +348,21 @@ def bisection_search(L, x):
 L = list(range(100))
 print(linear_search(L, 42))      # True
 print(bisection_search(L, 42))   # True
+```
 
+---
 
-## Lecture 11 – Understanding Program Efficiency (Part 2)
+## **Day 11 — Lecture 11: Program Efficiency (Part 2) and Search Comparison**
 
-### Key Concepts
+**Key Concepts:**
 - **Big-O Notation**: A way to measure algorithm efficiency.
 - **Linear Search (O(n))**: Checks elements one by one.
 - **Binary Search (O(log n))**: Divides list in half each step.
 - **Sorting Efficiency**: Some algorithms (like bubble sort) are slower compared to built-in optimized ones.
 
-### Practice Problem
-Compare Linear Search vs. Binary Search.
+**Practice Problem:** Compare Linear Search vs. Binary Search.
 
-### My Code
+**Code:**
 ```python
 import random
 import time
@@ -353,10 +399,18 @@ start = time.time()
 binary_result = binary_search(sorted_list, target)
 end = time.time()
 print("Binary Search:", end - start, "seconds")
+```
 
+---
 
+## **Day 12 — Lecture 12: Sorting Algorithms**
 
-# Lecture 12 - searching and sorting
+**Key Concepts:**
+- Bubble Sort and Selection Sort (simple but slow for large lists)
+- Python's built-in sort is much faster
+
+**Code:**
+```python
 import random
 import time
 
@@ -381,7 +435,7 @@ def selection_sort(lst):
     return lst
 
 # Test Performance
-size = 5000  # careful: bubble/selection are slow for big lists
+size = 5000  # bubble/selection are slow for big lists
 nums = [random.randint(0, 10000) for _ in range(size)]
 
 # Bubble Sort
@@ -404,3 +458,8 @@ start = time.time()
 nums_copy.sort()
 end = time.time()
 print("Python Built-in Sort Time:", end - start, "seconds")
+```
+
+---
+
+> _End of diary. More lectures and code coming soon!_
