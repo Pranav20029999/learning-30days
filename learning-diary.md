@@ -303,8 +303,54 @@ def bisection_search(L, x):
 L = list(range(100))
 print(linear_search(L, 42))      # True
 print(bisection_search(L, 42))   # True
-=======
-=======
-Day 8: Started GitHub Skills course. Created repo and branch. This is my first commit.
- main
->>>>>>> a45c3f3f945c28f8b959a60bb99a912eb69fbc4f
+
+
+## Lecture 11 – Understanding Program Efficiency (Part 2)
+
+### Key Concepts
+- **Big-O Notation**: A way to measure algorithm efficiency.
+- **Linear Search (O(n))**: Checks elements one by one.
+- **Binary Search (O(log n))**: Divides list in half each step.
+- **Sorting Efficiency**: Some algorithms (like bubble sort) are slower compared to built-in optimized ones.
+
+### Practice Problem
+Compare Linear Search vs. Binary Search.
+
+### My Code
+```python
+import random
+import time
+
+def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1
+
+def binary_search(lst, target):
+    low = 0
+    high = len(lst) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if lst[mid] == target:
+            return mid
+        elif lst[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+size = 1000000
+sorted_list = list(range(size))
+target = random.randint(0, size - 1)
+
+start = time.time()
+linear_result = linear_search(sorted_list, target)
+end = time.time()
+print("Linear Search:", end - start, "seconds")
+
+start = time.time()
+binary_result = binary_search(sorted_list, target)
+end = time.time()
+print("Binary Search:", end - start, "seconds")
+
