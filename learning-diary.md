@@ -463,3 +463,44 @@ print("Python Built-in Sort Time:", end - start, "seconds")
 ---
 
 > _End of diary. More lectures and code coming soon!_
+
+
+
+
+## Lecture 7: Decomposition, Abstraction, and Functions
+
+**Code Examples:**
+
+```python
+# Example: Function to compute square root using Newton-Raphson method
+
+def sqrt_newton(x, epsilon=1e-6):
+    guess = x / 2.0
+    while abs(guess * guess - x) > epsilon:
+        guess = guess - (((guess ** 2) - x) / (2 * guess))
+    return guess
+
+print("Square root of 25:", sqrt_newton(25))
+print("Square root of 2:", sqrt_newton(2))
+
+
+
+
+##Lecture 8
+# Functions can be treated as objects in Python
+
+def square(x):
+    return x * x
+
+def cube(x):
+    return x * x * x
+
+def apply_func(f, values):
+    result = []
+    for val in values:
+        result.append(f(val))
+    return result
+
+nums = [1, 2, 3, 4, 5]
+print("Squares:", apply_func(square, nums))
+print("Cubes:", apply_func(cube, nums))
