@@ -520,3 +520,35 @@ add = lambda a, b: a + b
 
 print("Square of 5:", square(5))
 print("Sum of 3 and 7:", add(3, 7))
+
+
+
+
+## **Lecture 10: Lists and Mutability**
+
+**Code Examples:**
+
+```python
+# Lists are mutable (can be changed)
+animals = ["cat", "dog", "rabbit"]
+print("Original list:", animals)
+
+# Change element
+animals[0] = "lion"
+print("After change:", animals)
+
+# Add new elements
+animals.append("tiger")
+print("After append:", animals)
+
+# Insert at position
+animals.insert(1, "elephant")
+print("After insert:", animals)
+
+# Remove elements
+animals.remove("dog")
+print("After remove:", animals)
+
+
+
+
