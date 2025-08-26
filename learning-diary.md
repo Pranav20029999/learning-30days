@@ -466,6 +466,7 @@ print("Python Built-in Sort Time:", end - start, "seconds")
 
 
 
+## codes from MIT 6.100L
 
 ## Lecture 7: Decomposition, Abstraction, and Functions
 
@@ -504,3 +505,18 @@ def apply_func(f, values):
 nums = [1, 2, 3, 4, 5]
 print("Squares:", apply_func(square, nums))
 print("Cubes:", apply_func(cube, nums))
+
+
+
+
+## **Lecture 9: Lambda Functions, Tuples, and Lists**
+
+**Code Examples:**
+
+```python
+# Lambda Functions
+square = lambda x: x * x
+add = lambda a, b: a + b
+
+print("Square of 5:", square(5))
+print("Sum of 3 and 7:", add(3, 7))
