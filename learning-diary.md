@@ -487,8 +487,12 @@ print("Square root of 2:", sqrt_newton(2))
 
 
 
-##Lecture 8
-# Functions can be treated as objects in Python
+## **Day 8 — Lecture 8: Functions as Objects**
+
+**Topics Covered:**
+- Functions can be passed as arguments and used as objects in Python
+
+**Code:**
 
 def square(x):
     return x * x
@@ -505,14 +509,17 @@ def apply_func(f, values):
 nums = [1, 2, 3, 4, 5]
 print("Squares:", apply_func(square, nums))
 print("Cubes:", apply_func(cube, nums))
+```
 
+---
 
+## **Day 9 — Lecture 9: Lambda Functions, Tuples, and Lists**
 
+**Topics Covered:**
+- Lambda (anonymous) functions
+- Tuples and lists
 
-## **Lecture 9: Lambda Functions, Tuples, and Lists**
-
-**Code Examples:**
-
+**Code:**
 ```python
 # Lambda Functions
 square = lambda x: x * x
@@ -520,16 +527,18 @@ add = lambda a, b: a + b
 
 print("Square of 5:", square(5))
 print("Sum of 3 and 7:", add(3, 7))
+```
 
+---
 
+## **Day 10 — Lecture 10: Lists and Mutability**
 
+**Topics Covered:**
+- Lists are mutable (can be changed)
+- List methods: append, insert, remove
 
-## **Lecture 10: Lists and Mutability**
-
-**Code Examples:**
-
+**Code:**
 ```python
-# Lists are mutable (can be changed)
 animals = ["cat", "dog", "rabbit"]
 print("Original list:", animals)
 
@@ -548,7 +557,5 @@ print("After insert:", animals)
 # Remove elements
 animals.remove("dog")
 print("After remove:", animals)
-
-
 
 
