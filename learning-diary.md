@@ -560,12 +560,10 @@ print("After remove:", animals)
 
 
 Day 11 — Lecture 11: Aliasing and Cloning
-
 Topics Covered:
 
-- Aliasing: When two variables refer to the same list
-- Cloning: Creating a copy of a list to avoid aliasing
-
+Aliasing: When two variables refer to the same list
+Cloning: Creating a copy of a list to avoid aliasing
 Code:
 
 # Aliasing example
@@ -591,6 +589,7 @@ b[0] = 100  # Changing b does NOT change a
 print("After modifying b:")
 print("a:", a)
 print("b:", b)
+
 
 
 
