@@ -559,9 +559,15 @@ animals.remove("dog")
 print("After remove:", animals)
 
 
-## Day 11 — Lecture 11: Aliasing and Cloning
 
-### Topics Covered:
+
+
+
+
+
+# **Day 11 — Lecture 11: Aliasing and Cloning**
+
+**Topics Covered:**
 - Aliasing: When two variables refer to the same list
 - Cloning: Creating a copy of a list to avoid aliasing
 
@@ -578,7 +584,7 @@ b[0] = 100  # Changing b also changes a
 print("After modifying b:")
 print("a:", a)
 print("b:", b)
-
+git
 # Cloning example
 a = [1, 2, 3]
 b = a[:]  # Clone using slicing
