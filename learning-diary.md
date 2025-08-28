@@ -587,6 +587,39 @@ print("d:", d)
 
 ---
 
+## **Day 12 — Lecture 12: List Comprehension, Functions as Objects, Testing, and Debugging**
+
+**Topics Covered:**
+- List Comprehension
+- Functions as Objects
+- Testing
+- Debugging
+
+**Code Example:**
+```python
+# List comprehension example
+nums = [1, 2, 3, 4, 5]
+squares = [x**2 for x in nums]
+print("Squares:", squares)
+
+# Functions as objects example
+def greet(name):
+    return f"Hello, {name}!"
+
+say_hello = greet
+print(say_hello("Pranav"))
+
+# Debugging / Testing example
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Cannot divide by zero"
+
+print(divide(10, 2))
+print(divide(10, 0))
+
+
 
 
 
