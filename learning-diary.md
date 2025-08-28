@@ -563,35 +563,26 @@ print("After remove:", animals)
 
 ## **Day 11 — Lecture 11: Aliasing and Cloning**
 
+
 **Topics Covered:**
-- **Aliasing:** When two variables refer to the same list, so changes to one change the other.
-- **Cloning:** Creating a true copy of a list so changes to one do not affect the other.
+- Aliasing: when two variables refer to the same list
+- Cloning: creating a new copy of a list
 
 **Code:**
 ```python
-# Aliasing example
+# Aliasing
 a = [1, 2, 3]
-b = a  # b is an alias for a (both point to the same list)
-
-print("Original a:", a)
-print("Original b:", b)
-
-b[0] = 100  # Changing b also changes a
-print("After modifying b:")
-print("a:", a)
+b = a  # both 'a' and 'b' refer to the same list
+b[0] = 100
+print("a:", a)  # a changes too
 print("b:", b)
 
-# Cloning example
-a = [1, 2, 3]
-b = a[:]  # Clone using slicing
-
-print("\nOriginal a:", a)
-print("Cloned b:", b)
-
-b[0] = 100  # Changing b does NOT change a
-print("After modifying b:")
-print("a:", a)
-print("b:", b)
+# Cloning
+c = [1, 2, 3]
+d = c[:]  # creates a new copy
+d[0] = 100
+print("c:", c)  # c remains unchanged
+print("d:", d)
 ```
 
 ---
