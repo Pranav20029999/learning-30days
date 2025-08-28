@@ -557,7 +557,9 @@ print("After insert:", animals)
 # Remove elements
 animals.remove("dog")
 print("After remove:", animals)
+```
 
+---
 
 ## **Day 11 — Lecture 11: Aliasing and Cloning**
 
@@ -590,7 +592,7 @@ b[0] = 100  # Changing b does NOT change a
 print("After modifying b:")
 print("a:", a)
 print("b:", b)
-```
+
 
 
 
