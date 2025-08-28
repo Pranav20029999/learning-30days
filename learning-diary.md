@@ -592,6 +592,13 @@ b[0] = 100  # Changing b does NOT change a
 print("After modifying b:")
 print("a:", a)
 print("b:", b)
+```
+
+---
+
+
+
+
 
 
 
