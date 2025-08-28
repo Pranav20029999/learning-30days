@@ -559,12 +559,6 @@ animals.remove("dog")
 print("After remove:", animals)
 
 
-
-
-
-
-
-
 ## **Day 11 — Lecture 11: Aliasing and Cloning**
 
 **Topics Covered:**
