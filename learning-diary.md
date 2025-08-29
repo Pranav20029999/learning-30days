@@ -617,6 +617,86 @@ def divide(a, b):
 
 print(divide(10, 2))
 print(divide(10, 0))
+```
+
+---
+
+
+## **Day 13 — Lecture 13: Exceptions and Assertions**
+
+### Topics Covered
+- Exceptions in Python  
+- Handling errors with `try`, `except`, `finally`  
+- Using assertions to catch bugs early  
+- Writing safer and more robust code  
+
+### Example Code
+```python
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+except ValueError:
+    print("Invalid input, please enter a number.")
+finally:
+    print("Execution completed.")
+
+# Assertion example
+x = 5
+assert x > 0, "x must be positive"
+```
+
+---
+
+
+## Lecture 14 — Dictionaries
+
+**Topics Covered:**
+1. Dictionaries as key–value mappings
+2. Creating and updating dictionaries
+3. Accessing values by keys
+4. Iterating over keys, values, and items
+
+**Code Example:**
+```python
+# Creating a dictionary
+student = {"name": "Alice", "age": 22, "major": "CS"}
+print(student)
+
+# Accessing a value
+print("Name:", student["name"])
+
+# Adding a new key–value
+student["grade"] = "A"
+print(student)
+
+# Iterating
+for key, value in student.items():
+    print(key, "->", value)
+```
+
+---
+
+## Lecture 15 — Recursion
+
+**Topics Covered:**
+1. What is recursion  
+2. Base case vs recursive step  
+3. Factorial using recursion  
+4. Fibonacci sequence using recursion  
+5. Common pitfalls (missing base case, infinite recursion)
+
+**Code Example (Factorial):**
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))  # Output: 120
+
+
 
 
 ## **Day 12 — Lecture 12: List Comprehension, Functions as Objects, Testing, and Debugging**
