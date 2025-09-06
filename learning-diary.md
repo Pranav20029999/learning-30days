@@ -695,52 +695,91 @@ def factorial(n):
     return n * factorial(n-1)
 
 print(factorial(5))  # Output: 120
+```
+
+---
 
 
 
+# Lecture 16: Recursion on Non-numerics
 
-## **Day 12 — Lecture 12: List Comprehension, Functions as Objects, Testing, and Debugging**
-
-**Topics Covered:**
-- List Comprehension
-- Functions as Objects
-- Testing
-- Debugging
-
-**Code Example:**
 ```python
-# List comprehension example
-nums = [1, 2, 3, 4, 5]
-squares = [x**2 for x in nums]
-print("Squares:", squares)
+# 1. Fibonacci (inefficient recursive version)
+def fib(x):
+    if x == 1 or x == 2:
+        return 1
+    else:
+        return fib(x - 1) + fib(x - 2)
 
-# Functions as objects example
-def greet(name):
-    return f"Hello, {name}!"
+# 2. Fibonacci with memoization (efficient)
+def fib_efficient(n, d):
+    if n in d:
+        return d[n]
+    else:
+        ans = fib_efficient(n - 1, d) + fib_efficient(n - 2, d)
+        d[n] = ans
+        return ans
 
-say_hello = greet
-print(say_hello("Pranav"))
+d = {1: 1, 2: 1}
+print(fib_efficient(6, d))
 
-# Debugging / Testing example
-def divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
-        return "Cannot divide by zero"
+# 3. Counting ways to score x points (1, 2, or 3) in basketball
+def score_count(x):
+    """Returns number of ways to make score x using 1, 2, or 3 points additions."""
+    if x == 1:
+        return 1
+    elif x == 2:
+        return 2
+    elif x == 3:
+        return 3
+    else:
+        return score_count(x - 1) + score_count(x - 2) + score_count(x - 3)
 
-print(divide(10, 2))
-print(divide(10, 0))
+# 4. Sum of list elements (iterative)
+def total_iter(L):
+    result = 0
+    for e in L:
+        result += e
+    return result
 
+# 5. Sum of list elements (recursive)
+def total_recur(L):
+    if len(L) == 1:
+        return L[0]
+    else:
+        return L[0] + total_recur(L[1:])
 
+# 6. Element search in a list
+def in_list(L, e):
+    if len(L) == 0:
+        return False
+    elif L[0] == e:
+        return True
+    else:
+        return in_list(L[1:], e)
 
+# 7. Flatten a nested (1-level) list of lists
+def flatten(L):
+    if len(L) == 1:
+        return L[0]
+    else:
+        return L[0] + flatten(L[1:])
 
+# 8. Reverse a list (top-level only)
+def my_rev(L):
+    if len(L) == 1:
+        return L
+    else:
+        return my_rev(L[1:]) + [L[0]]
 
+# 9. Deep reverse: reverse including nested lists
+def deep_rev(L):
+    if L == []:
+        return []
+    elif type(L[0]) != list:
+        return deep_rev(L[1:]) + [L[0]]
+    else:
+        return deep_rev(L[1:]) + [deep_rev(L[0])]
+```
 
-
-
-
-
-
-
-
-
+---
